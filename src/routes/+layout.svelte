@@ -8,7 +8,7 @@
 
 <div class="navbar bg-neutral text-neutral-content px-5 py-3">
     <div class="flex-1">
-      <a class="btn btn-ghost p-1" href="{base}/"><Logo/></a>
+      <a class="btn btn-ghost p-2" href="{base}/"><Logo/></a>
     </div>
     <div class="flex-none sm:hidden">
         <div class="dropdown dropdown-end">
@@ -26,6 +26,5 @@
     </div>
 </div>
 
-<div class="container py-10 px-5 sm:px-20 lg:px-40">
-    <slot />
-</div>
+<slot />
+<!-- <div class="container py-10 px-5 sm:px-20 lg:px-40"></div> -->
