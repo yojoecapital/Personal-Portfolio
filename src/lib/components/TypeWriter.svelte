@@ -3,8 +3,8 @@
     import { onDestroy } from "svelte";
 
     // props
-    export const cursorOn = "\u2503";
-    export const cursorOff = "\u00A0";
+    export const cursorOn = " \u2503";
+    export const cursorOff = " \u00A0";
     export const timeout = 100;
     export let words: string[];
 
