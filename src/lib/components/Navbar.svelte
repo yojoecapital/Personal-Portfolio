@@ -21,8 +21,8 @@
                         <li><a href="{base}#console-apps">Console Apps</a></li>
                     </ul>
                 </li>
-                <li><a href="{base}#experience">Experience 💼</a></li>
-                <li><a href="{base}#education">Education 🤓</a></li>
+                <!-- <li><a href="{base}#experience">Experience 💼</a></li>
+                <li><a href="{base}#education">Education 🤓</a></li> -->
                 <li><a href="{base}/yousef_suleiman_resume.pdf" target="_blank" rel="noopener noreferrer">Resume 📃</a></li>
             </ul>
         </div>
@@ -30,8 +30,8 @@
     <div class="flex-none hidden md:block">
         <ul class="menu menu-horizontal px-1 text-lg">
             <li><a href="{base}#projects">Projects 🔨</a></li>
-            <li><a href="{base}#experience">Experience 💼</a></li>
-            <li><a href="{base}#education">Education 🤓</a></li>
+            <!-- <li><a href="{base}#experience">Experience 💼</a></li>
+            <li><a href="{base}#education">Education 🤓</a></li> -->
             <li><a href="{base}/yousef_suleiman_resume.pdf" target="_blank" rel="noopener noreferrer">Resume 📃</a></li>
         </ul>
     </div>
