@@ -8,7 +8,6 @@
     export const timeout = 100;
     export let words: string[];
 
-    // local
     let cursor = cursorOn;
     let count = 0;
     let active = true;

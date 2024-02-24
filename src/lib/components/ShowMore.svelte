@@ -1,0 +1,16 @@
+<script lang="ts">
+    // props
+    export let maxClass = "max-h-16 md:max-h-32";
+
+    let showMore = false;
+    function toggleShowMore() {
+        showMore = !showMore;
+    }
+</script>
+
+<div class={$$props.class}>
+    <div class="{showMore ? "" : `${maxClass} truncate`}">
+        <slot/>
+    </div>
+    <button class="w-full text-right link link-primary" on:click={toggleShowMore}>Show {showMore ? 'Less' : 'More'}</button>
+</div>
