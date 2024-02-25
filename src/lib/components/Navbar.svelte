@@ -1,18 +1,17 @@
 <script lang="ts">
     import Logo from "$lib/components/Logo.svelte";
-    import { List } from "svelte-bootstrap-icons";
     import { base } from '$app/paths';
 </script>
-
-<div class="navbar bg-neutral text-neutral-content px-5 py-3 {$$props.class}">
-    <div class="flex-1">
-      <a class="btn btn-ghost p-2" href="{base}/"><Logo/></a>
-    </div>
-    <div class="flex-none md:hidden">
-        <div class="dropdown dropdown-end">
-            <div tabindex="0" role="button" class="btn btn-ghost p-1"><List width="100%" height="100%"/></div>
+<div class="navbar bg-base-300 {$$props.class}">
+    <div class="navbar-start">
+        <div class="dropdown">
+            <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" />
+                </svg>
+            </div>
             <!-- svelte-ignore a11y-no-noninteractive-tabindex -->
-            <ul tabindex="0" class="dropdown-content z-50 menu p-2 shadow bg-base-300 rounded-box text-lg">
+            <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-300 rounded-box w-52">
                 <li>
                     <a href="{base}#projects">Projects 🔨</a>
                     <ul>
@@ -24,15 +23,32 @@
                 <!-- <li><a href="{base}#experience">Experience 💼</a></li>
                 <li><a href="{base}#education">Education 🤓</a></li> -->
                 <li><a href="{base}/yousef_suleiman_resume.pdf" target="_blank" rel="noopener noreferrer">Resume 📃</a></li>
+                <li>
+                    <label class="swap place-content-start">
+                        <input type="checkbox" data-toggle-theme="dark,light" data-act-class="ACTIVECLASS"/>
+                        <div class="swap-on">Light 🌞</div>
+                        <div class="swap-off">Dark 🌚</div>
+                    </label>
+                </li>
             </ul>
         </div>
+        <a class="btn btn-ghost p-2" href="{base}/">
+            <Logo/>
+        </a>
     </div>
-    <div class="flex-none hidden md:block">
-        <ul class="menu menu-horizontal px-1 text-lg">
-            <li><a href="{base}#projects">Projects 🔨</a></li>
+    <div class="navbar-end hidden lg:flex">
+        <ul class="menu menu-horizontal px-1">
+            <li><a href="{base}#projects">Projects 🔨</a></li> 
             <!-- <li><a href="{base}#experience">Experience 💼</a></li>
             <li><a href="{base}#education">Education 🤓</a></li> -->
             <li><a href="{base}/yousef_suleiman_resume.pdf" target="_blank" rel="noopener noreferrer">Resume 📃</a></li>
+            <li>
+                <label class="swap">
+                    <input type="checkbox" data-toggle-theme="dark,light" data-act-class="ACTIVECLASS"/>
+                    <div class="swap-on">Light 🌞</div>
+                    <div class="swap-off">Dark 🌚</div>
+                </label>
+            </li>
         </ul>
     </div>
 </div>

@@ -8,7 +8,7 @@
     export let devSet: string[][] = [];
 </script>
 
-<div class="card card-compact max-w-lg bg-base-100 shadow-xl ">
+<div class="card card-compact glass max-w-lg bg-base-100 shadow-xl ">
     {#if src}
         <figure><img class="w-full" {src} alt={title}/></figure>
     {/if}
