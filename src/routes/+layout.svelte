@@ -6,7 +6,7 @@
 
     onMount(() => {
         themeChange(false)
-    })
+    });
 </script>
 
 <div class="flex flex-col h-screen">

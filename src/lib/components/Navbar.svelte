@@ -1,4 +1,5 @@
 <script lang="ts">
+    // imports
     import Logo from "$lib/components/Logo.svelte";
     import { base } from '$app/paths';
 </script>
@@ -20,35 +21,33 @@
                         <li><a href="{base}#console-apps">Console Apps</a></li>
                     </ul>
                 </li>
-                <!-- <li><a href="{base}#experience">Experience 💼</a></li>
-                <li><a href="{base}#education">Education 🤓</a></li> -->
-                <li><a href="{base}/yousef_suleiman_resume.pdf" target="_blank" rel="noopener noreferrer">Resume 📃</a></li>
+                <li><a href="{base}#experience">Experience 💼</a></li>
+                <li><a href="{base}#education">Education 🤓</a></li>
                 <li>
                     <label class="swap place-content-start">
                         <input type="checkbox" data-toggle-theme="dark,light" data-act-class="ACTIVECLASS"/>
-                        <div class="swap-on">Light 🌞</div>
-                        <div class="swap-off">Dark 🌚</div>
+                        <div class="swap-on">Dark 🌚</div>
+                        <div class="swap-off">Light 🌞</div>
                     </label>
                 </li>
             </ul>
         </div>
-        <a class="btn btn-ghost p-2" href="{base}/">
+        <a class="btn btn-ghost p-2" href="{base}#home">
             <Logo/>
         </a>
     </div>
     <div class="navbar-end hidden lg:flex">
         <ul class="menu menu-horizontal px-1">
-            <li><a href="{base}#projects">Projects 🔨</a></li> 
-            <!-- <li><a href="{base}#experience">Experience 💼</a></li>
-            <li><a href="{base}#education">Education 🤓</a></li> -->
-            <li><a href="{base}/yousef_suleiman_resume.pdf" target="_blank" rel="noopener noreferrer">Resume 📃</a></li>
             <li>
                 <label class="swap">
                     <input type="checkbox" data-toggle-theme="dark,light" data-act-class="ACTIVECLASS"/>
-                    <div class="swap-on">Light 🌞</div>
-                    <div class="swap-off">Dark 🌚</div>
+                    <div class="swap-on">Dark 🌚</div>
+                    <div class="swap-off">Light 🌞</div>
                 </label>
             </li>
+            <li><a href="{base}#projects">Projects 🔨</a></li> 
+            <li><a href="{base}#experience">Experience 💼</a></li>
+            <li><a href="{base}#education">Education 🤓</a></li>
         </ul>
     </div>
 </div>
