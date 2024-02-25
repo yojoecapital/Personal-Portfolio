@@ -24,6 +24,7 @@
                 </li>
                 <li><a href="{base}#experience">Experience 💼</a></li>
                 <li><a href="{base}#education">Education 🤓</a></li>
+                <li><a href="{base}#contact">Contact ☎️</a></li>
                 <li>
                     <LightSwitch class="place-content-start"/>
                 </li>
@@ -33,14 +34,15 @@
             <Logo/>
         </a>
     </div>
-    <div class="navbar-end hidden lg:flex">
+    <div class="navbar-center hidden lg:flex">
         <ul class="menu menu-horizontal px-1">
-            <li>
-                <LightSwitch/>
-            </li>
             <li><a href="{base}#projects">Projects 🔨</a></li> 
             <li><a href="{base}#experience">Experience 💼</a></li>
             <li><a href="{base}#education">Education 🤓</a></li>
+            <li><a href="{base}#contact">Contact ☎️</a></li>
         </ul>
+    </div>
+    <div class="navbar-end hidden lg:flex">
+        <ul class="menu menu-horizontal px-1"><li><LightSwitch/></li></ul>
     </div>
 </div>

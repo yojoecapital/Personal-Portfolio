@@ -12,5 +12,5 @@
     <div class="{showMore ? "" : `${maxClass} truncate`}">
         <slot/>
     </div>
-    <button class="w-full text-right link link-hover" on:click={toggleShowMore}>Show {showMore ? 'Less' : 'More'}</button>
+    <button class="w-full text-right link" on:click={toggleShowMore}>Show {showMore ? 'Less' : 'More'}</button>
 </div>

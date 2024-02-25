@@ -10,6 +10,7 @@
     import { blur } from "svelte/transition";
     import { getThemeStore, type ThemeStore } from "$lib/stores/theme";
     import { onMount } from "svelte";
+  import Mail from "$lib/components/icons/Mail.svelte";
     
     let theme: ThemeStore;
     onMount(() => {
@@ -70,9 +71,9 @@
         repo="https://github.com/yojoecapital/pokescanner"
     >
         PokéScanner is a web application that my 
-        <a href="https://github.com/yojoecapital/PokeScanner?tab=readme-ov-file#team-members" target="_blank" rel="noopener noreferrer" class="link link-hover">team</a> 
+        <a href="https://github.com/yojoecapital/PokeScanner?tab=readme-ov-file#team-members" target="_blank" rel="noopener noreferrer" class="link">team</a> 
         and I developed during our 
-        <a href="https://www.iit.edu/academics/active-learning/ipro" target="_blank" rel="noopener noreferrer" class="link link-hover">IPRO-497 Global Product Development </a> 
+        <a href="https://www.iit.edu/academics/active-learning/ipro" target="_blank" rel="noopener noreferrer" class="link">IPRO-497 Global Product Development </a> 
         class.
         It can be used to upload or take a photo any generation 1 Pokémon. 
         PokéScanner will identify the the Pokémon in the image and provide its Pokédex information.
@@ -149,6 +150,15 @@
                     <li>Early Acceptance to Illinois Tech's Accelerated Master's Program</li>
                 </ul>
             </div>
+        </div>
+    </div>
+    <Header id="contact">Contact ☎️</Header>
+    <div class="card card-compact max-w-lg bg-base-200 border-0 shadow-xl">
+        <div class="card-body">
+            <p>
+                Please contact me directly at <a href="mailto:yousefsuleiman10@gmail.com" target="_blank" rel="noopener noreferrer" class="link">yousefsuleiman10@gmail.com</a>
+                or via <a href="https://www.linkedin.com/in/yousef-suleiman-4ba75a242" target="_blank" rel="noopener noreferrer" class="link">LinkedIn</a>.
+            </p>
         </div>
     </div>
 </div>
