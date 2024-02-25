@@ -7,7 +7,6 @@
     import GitHub from "$lib/components/icons/GitHub.svelte";
     import LinkedIn from "$lib/components/icons/LinkedIn.svelte";
     import Link from "$lib/components/icons/Link.svelte";
-    import Youtube from "$lib/components/icons/Youtube.svelte";
 </script>
 
 <div id="home" class="min-h-full flex flex-col bg-base-200">
