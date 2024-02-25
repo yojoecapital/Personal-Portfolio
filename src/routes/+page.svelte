@@ -10,7 +10,6 @@
     import { blur } from "svelte/transition";
     import { getThemeStore, type ThemeStore } from "$lib/stores/theme";
     import { onMount } from "svelte";
-  import Mail from "$lib/components/icons/Mail.svelte";
     
     let theme: ThemeStore;
     onMount(() => {
@@ -28,7 +27,7 @@
                             class="bg-contain bg-center bg-no-repeat"
                             style="background-image: url({base}/bg/world-{$theme ? "dark" : "light"}.png); image-rendering: pixelated;"    
                         >
-                            <div class="avatar scale-[55%]">
+                            <div class="avatar scale-[55%] size-full">
                                 <div class="rounded-full ring-8 ring-primary ring-offset-base-100 ring-offset-8"><img src="yousef.png" alt="Yousef Suleiman" style="image-rendering: auto;"/></div>
                             </div>
                         </div>
