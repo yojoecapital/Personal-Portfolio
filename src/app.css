@@ -3,10 +3,10 @@
 @tailwind utilities;
 
 :root {
-    --bg-sky-light: url("https://yojoecapital.github.io/Personal-Portfolio/bg/bg-light.gif");
-    --bg-sky-dark: url("https://yojoecapital.github.io/Personal-Portfolio/bg/bg-dark.gif");
-    --bg-world-light: url("https://yojoecapital.github.io/Personal-Portfolio/bg/world-light.png");
-    --bg-world-dark: url("https://yojoecapital.github.io/Personal-Portfolio/bg/world-dark.png");
+    --bg-sky-light: url("bg/bg-light.gif");
+    --bg-sky-dark: url("bg/bg-dark.gif");
+    --bg-world-light: url("bg/world-light.png");
+    --bg-world-dark: url("bg/world-dark.png");
 }
 
 body {
@@ -23,10 +23,10 @@ body {
     --bg-world: var(--bg-world-light);
 }
 
-.sky-bg {
+.bg-sky {
     background-image: var(--bg-sky);
 }
 
-.world-bg {
+.bg-world {
     background-image: var(--bg-world);
 }

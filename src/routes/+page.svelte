@@ -7,41 +7,56 @@
     import GitHub from "$lib/components/icons/GitHub.svelte";
     import LinkedIn from "$lib/components/icons/LinkedIn.svelte";
     import Link from "$lib/components/icons/Link.svelte";
+    import { blur } from "svelte/transition";
+    import { getThemeStore, type ThemeStore } from "$lib/stores/theme";
+    import { onMount } from "svelte";
+    
+    let theme: ThemeStore;
+    onMount(() => {
+        theme = getThemeStore();
+    });
 </script>
 
-<div id="home" class="min-h-full flex flex-col bg-base-200">
+<div id="home" class="min-h-full flex flex-col bg-base-200 bg-pattern">
     <div class="flex-1 flex justify-center items-center">
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-3 max-w-screen-lg h-full md:h-auto m-5">
-            <div class="flex justify-center items-start md:items-center">
-                <div class="max-w-96 bg-contain bg-center bg-no-repeat world-bg">
-                    <div class="avatar scale-[55%]">
-                        <div class="rounded-full ring-8 ring-primary ring-offset-base-100 ring-offset-8"><img src="yousef.png" alt="Yousef Suleiman"/></div>
+        {#await new Promise(r => setTimeout(r, 100)) then}
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-3 max-w-screen-lg h-full md:h-auto m-5" in:blur={{duration: 300}}>
+                <div class="flex justify-center items-start md:items-center">
+                    <div class="max-w-96">
+                        <div 
+                            class="bg-contain bg-center bg-no-repeat"
+                            style="background-image: url({base}/bg/world-{$theme ? "dark" : "light"}.png); image-rendering: pixelated;"    
+                        >
+                            <div class="avatar scale-[55%]">
+                                <div class="rounded-full ring-8 ring-primary ring-offset-base-100 ring-offset-8"><img src="yousef.png" alt="Yousef Suleiman" style="image-rendering: auto;"/></div>
+                            </div>
+                        </div>
                     </div>
-                </div>
-            </div> 
-            <div class="flex max-h-lvh md:h-auto md:items-center">
-                <div class="text-xl md:text-2xl">
-                    <strong>
-                        Hi, I'm Yousef.
-                    </strong>
-                    <p>
-                        I'm a Computer Science major at Illinois Institute of Technology and I make 
-                        <TypeWriter words={["web apps.", "video games.", "animations.", "console apps."]}/>
-                    </p>
-                    <div class="mt-3">
-                        <a href="https://github.com/yojoecapital" target="_blank" rel="noopener noreferrer" class="btn btn-neutral mb-2"><GitHub/></a>
-                        <a href="https://www.linkedin.com/in/yousef-suleiman-4ba75a242" target="_blank" rel="noopener noreferrer" class="btn btn-neutral mb-2"><LinkedIn/></a>
-                        <a href="{base}/yousef_suleiman_resume.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-neutral mb-2"><Link/> Resume</a>
+                </div> 
+                <div class="flex max-h-lvh md:h-auto md:items-center">
+                    <div class="text-xl md:text-2xl">
+                        <strong>
+                            Hi, I'm Yousef.
+                        </strong>
+                        <p>
+                            I'm a Computer Science major at Illinois Institute of Technology and I make 
+                            <TypeWriter words={["web apps.", "video games.", "animations.", "console apps."]}/>
+                        </p>
+                        <div class="mt-3">
+                            <a href="https://github.com/yojoecapital" target="_blank" rel="noopener noreferrer" class="btn btn-neutral mb-2"><GitHub/></a>
+                            <a href="https://www.linkedin.com/in/yousef-suleiman-4ba75a242" target="_blank" rel="noopener noreferrer" class="btn btn-neutral mb-2"><LinkedIn/></a>
+                            <a href="{base}/yousef_suleiman_resume.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-neutral mb-2"><Link/> Resume</a>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
+        {/await}
     </div>
     <div class="flex-none">
-        <img class="w-full" src="bg/animation.gif" alt="Animation"/>
+        <img class="w-full" src="bg/animation.gif" alt="Animation" style="image-rendering: pixelated;"/>
     </div>
 </div>
-<div class="flex flex-col items-center gap-5 p-5 mb-80">
+<div class="flex flex-col items-center gap-5 p-5 mb-80" style="image-rendering: auto;">
     <Header id="projects">Projects 🔨</Header>
     <h3 id="web-apps" class="text-xl sm:text-2xl">Web Apps 💻</h3>
     <ProjectCard title="Quran Dojo" src="images/quran-dojo.jpg" devSet={[[".NET", "C#"]]}>
@@ -50,13 +65,14 @@
         Plans are created with the goal of increasing and/or maintaining pages per day milestones. 
         The application will automatically generate daily tasks that the teacher can assign to their students and later follow up on.
     </ProjectCard>
-    <ProjectCard title="PokeScanner" src="images/pokescanner.gif" devSet={[["Django", "TensorFlow", "Keras", "Python"], ["React", "JavaScript"]]} 
+    <ProjectCard 
+        title="PokeScanner" src="images/pokescanner.gif" devSet={[["Django", "TensorFlow", "Keras", "Python"], ["React", "JavaScript"]]} 
         repo="https://github.com/yojoecapital/pokescanner"
     >
         PokéScanner is a web application that my 
-        <a href="https://github.com/yojoecapital/PokeScanner?tab=readme-ov-file#team-members" target="_blank" rel="noopener noreferrer" class="link link-primary">team</a> 
+        <a href="https://github.com/yojoecapital/PokeScanner?tab=readme-ov-file#team-members" target="_blank" rel="noopener noreferrer" class="link link-hover">team</a> 
         and I developed during our 
-        <a href="https://www.iit.edu/academics/active-learning/ipro" target="_blank" rel="noopener noreferrer" class="link link-primary">IPRO-497 Global Product Development </a> 
+        <a href="https://www.iit.edu/academics/active-learning/ipro" target="_blank" rel="noopener noreferrer" class="link link-hover">IPRO-497 Global Product Development </a> 
         class.
         It can be used to upload or take a photo any generation 1 Pokémon. 
         PokéScanner will identify the the Pokémon in the image and provide its Pokédex information.
@@ -72,7 +88,8 @@
             I intend to train an AI model capable of playing against human opponents.
         </p>
     </ProjectCard>
-    <ProjectCard title="Cornerfalls Combat" src="images/cornerfalls-combat.gif" devSet={[["Unity", "C#"]]} 
+    <ProjectCard 
+        title="Cornerfalls Combat" src="images/cornerfalls-combat.gif" devSet={[["Unity", "C#"]]} 
         demo="https://youtu.be/zr5MMaFu_Po"
         repo="https://github.com/yojoecapital/Cornerfalls-Combat"
     >
@@ -88,7 +105,8 @@
         Macro Polo is a program made for Windows Systems that used Win32 keyboard hooks to allow users to create and 
         manage keyboard macros and perform text substitutions.
     </ProjectCard>
-    <ProjectCard title="Arabize" src="images/arabize.jpg" devSet={[[".NET Core", "Windows API", "C#"]]}
+    <ProjectCard 
+        title="Arabize" src="images/arabize.jpg" devSet={[[".NET Core", "Windows API", "C#"]]}
         repo="https://github.com/yojoecapital/Arabize"
     >
         Arabize is a CLI for Windows Systems that translates Arabic-transliterated letters into Arabic Unicode characters and copies to clipboard.
@@ -110,7 +128,7 @@
         }
     ]}/>
     <Header id="education">Education 🤓</Header>
-    <div class="card card-compact max-w-lg bg-slate-500 text-white border-0 shadow-xl">
+    <div class="card card-compact max-w-lg bg-base-200 border-0 shadow-xl">
         <div class="card-body">
             <a href="https://www.iit.edu" target="_blank" rel="noopener noreferrer">
                 <img class="w-40" src="iit.svg" alt="Illinois Tech">
@@ -133,4 +151,10 @@
             </div>
         </div>
     </div>
-</div> 
+</div>
+
+<style>
+    .bg-pattern {
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='96' viewBox='0 0 60 96'%3E%3Cg fill-rule='evenodd'%3E%3Cg fill='%23000000' fill-opacity='0.1'%3E%3Cpath d='M36 10a6 6 0 0 1 12 0v12a6 6 0 0 1-6 6 6 6 0 0 0-6 6 6 6 0 0 1-12 0 6 6 0 0 0-6-6 6 6 0 0 1-6-6V10a6 6 0 1 1 12 0 6 6 0 0 0 12 0zm24 78a6 6 0 0 1-6-6 6 6 0 0 0-6-6 6 6 0 0 1-6-6V58a6 6 0 1 1 12 0 6 6 0 0 0 6 6v24zM0 88V64a6 6 0 0 0 6-6 6 6 0 0 1 12 0v12a6 6 0 0 1-6 6 6 6 0 0 0-6 6 6 6 0 0 1-6 6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");    
+    }
+</style>
