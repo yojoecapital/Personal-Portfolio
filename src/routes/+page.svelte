@@ -17,40 +17,40 @@
     });
 </script>
 
-<div id="home" class="min-h-full flex flex-col bg-base-200 bg-pattern">
+<div id="home" class="min-h-full flex flex-col bg-pattern bg-base-200">
     <div class="flex-1 flex justify-center items-center">
-        {#await new Promise(r => setTimeout(r, 100)) then}
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-3 max-w-screen-lg h-full md:h-auto m-5" in:blur={{duration: 300}}>
-                <div class="flex justify-center items-start md:items-center">
-                    <div class="max-w-96">
-                        <div 
-                            class="bg-contain bg-center bg-no-repeat"
-                            style="background-image: url({base}/bg/world-{$theme ? "dark" : "light"}.png); image-rendering: pixelated;"    
-                        >
-                            <div class="avatar scale-[55%] size-full">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-3 max-w-screen-lg h-full md:h-auto m-5" in:blur={{duration: 300}}>
+            <div class="flex justify-center items-start md:items-center">
+                <div class="max-w-96">
+                    <div 
+                        class="bg-contain bg-center bg-no-repeat"
+                        style="background-image: url({base}/bg/world-{$theme ? "dark" : "light"}.png); image-rendering: pixelated;"    
+                    >
+                        <div class="size-full">
+                            <div class="avatar m-[25%] md:m-[23%]">
                                 <div class="rounded-full ring-8 ring-primary ring-offset-base-100 ring-offset-8"><img src="yousef.png" alt="Yousef Suleiman" style="image-rendering: auto;"/></div>
                             </div>
                         </div>
                     </div>
-                </div> 
-                <div class="flex max-h-lvh md:h-auto md:items-center">
-                    <div class="text-xl md:text-2xl">
-                        <strong>
-                            Hi, I'm Yousef.
-                        </strong>
-                        <p>
-                            I'm a Computer Science major at Illinois Institute of Technology and I make 
-                            <TypeWriter words={["web apps.", "video games.", "animations.", "console apps."]}/>
-                        </p>
-                        <div class="mt-3">
-                            <a href="https://github.com/yojoecapital" target="_blank" rel="noopener noreferrer" class="btn btn-neutral mb-2"><GitHub/></a>
-                            <a href="https://www.linkedin.com/in/yousef-suleiman-4ba75a242" target="_blank" rel="noopener noreferrer" class="btn btn-neutral mb-2"><LinkedIn/></a>
-                            <a href="{base}/yousef_suleiman_resume.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-neutral mb-2"><Link/> Resume</a>
-                        </div>
+                </div>
+            </div> 
+            <div class="flex max-h-lvh md:h-auto md:items-center">
+                <div class="text-xl md:text-2xl">
+                    <strong>
+                        Hi, I'm Yousef.
+                    </strong>
+                    <p>
+                        I'm a Computer Science major at Illinois Institute of Technology and I make 
+                        <TypeWriter words={["web apps.", "video games.", "animations.", "console apps."]}/>
+                    </p>
+                    <div class="mt-3">
+                        <a href="https://github.com/yojoecapital" target="_blank" rel="noopener noreferrer" class="btn btn-neutral mb-2"><GitHub/></a>
+                        <a href="https://www.linkedin.com/in/yousef-suleiman-4ba75a242" target="_blank" rel="noopener noreferrer" class="btn btn-neutral mb-2"><LinkedIn/></a>
+                        <a href="{base}/yousef_suleiman_resume.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-neutral mb-2"><Link/> Resume</a>
                     </div>
                 </div>
             </div>
-        {/await}
+        </div>
     </div>
     <div class="flex-none">
         <img class="w-full" src="bg/animation.gif" alt="Animation" style="image-rendering: pixelated;"/>
@@ -66,7 +66,7 @@
         The application will automatically generate daily tasks that the teacher can assign to their students and later follow up on.
     </ProjectCard>
     <ProjectCard 
-        title="PokeScanner" src="images/pokescanner.gif" devSet={[["Django", "TensorFlow", "Keras", "Python"], ["React", "JavaScript"]]} 
+        title="PokeScanner" src="images/pokescanner.gif" devSet={[["Django", "TensorFlow", "Python"], ["React", "JavaScript"]]} 
         repo="https://github.com/yojoecapital/pokescanner"
     >
         PokéScanner is a web application that my 
