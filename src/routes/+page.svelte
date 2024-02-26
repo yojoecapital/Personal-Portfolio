@@ -149,8 +149,8 @@
                 <Skill src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg" text="Git"/>
                 <Skill src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/linux/linux-original.svg" text="Linux"/>
                 <Skill src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/unity/unity-original.svg" text="Unity"/>
-                <Skill src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/blender/blender-original.svg" text="Blender"/>
-                <Skill src="{base}/moho.svg" text="Moho"/>
+                <Skill src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/blender/blender-original.svg" text="Blender" href="https://www.blender.org"/>
+                <Skill src="{base}/moho.svg" text="Moho" href="https://moho.lostmarble.com"/>
             </p>
         </div>
     </div>
@@ -158,15 +158,15 @@
     <Timeline events={[
         {
             when: "June 2023 - Present",
-            title: "DevOps Summer Internship - DataServ",
+            title: "DevOps Internship - DataServ",
             description: `As a DevOps intern, I mainly deal with backend development. 
-            Some of the projects I worked on include streamlining T-SQL database operations by managing triggers,
+            Some of the tasks I am working on include streamlining T-SQL database operations by managing triggers,
             executing unit tests, and conducting post-promotion validations to ensure the reliability of implemented solutions.`
         },
         {
             when: "June - July 2022 & Dec - Feb 2024",
-            title: "Business Technology Internship - IAA ",
-            description: `As a Business Technology intern, I worked on web developed using ASP.NET MVC, C#, and T-SQL.
+            title: "Business Technology Internship - IAA",
+            description: `As a Business Technology intern, I worked on web development using ASP.NET MVC, C#, and T-SQL.
             I developed a REST API to populate internal client reports.`
         }
     ]}/>
