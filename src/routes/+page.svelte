@@ -164,7 +164,7 @@
             executing unit tests, and conducting post-promotion validations to ensure the reliability of implemented solutions.`
         },
         {
-            when: "June - July 2022 & Dec - Feb 2024",
+            when: "June - July 2022 & Dec - Feb 2023",
             title: "Business Technology Internship - IAA",
             description: `As a Business Technology intern, I worked on web development using ASP.NET MVC, C#, and T-SQL.
             I developed a REST API to populate internal client reports.`
