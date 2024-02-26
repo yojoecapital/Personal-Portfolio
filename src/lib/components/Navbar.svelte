@@ -22,6 +22,7 @@
                         <li><a href="{base}#console-apps">Console Apps</a></li>
                     </ul>
                 </li>
+                <li><a href="{base}#skills">Skills 🧠</a></li>
                 <li><a href="{base}#experience">Experience 💼</a></li>
                 <li><a href="{base}#education">Education 🤓</a></li>
                 <li><a href="{base}#contact">Contact ☎️</a></li>
@@ -37,6 +38,7 @@
     <div class="navbar-center hidden lg:flex">
         <ul class="menu menu-horizontal px-1">
             <li><a href="{base}#projects">Projects 🔨</a></li> 
+            <li><a href="{base}#skills">Skills 🧠</a></li>
             <li><a href="{base}#experience">Experience 💼</a></li>
             <li><a href="{base}#education">Education 🤓</a></li>
             <li><a href="{base}#contact">Contact ☎️</a></li>
