@@ -3,7 +3,7 @@ import { writable, get, type Subscriber, type Invalidator, type Unsubscriber } f
 function createStore() {
     let value: boolean;
     try {
-        value = JSON.parse(localStorage.getItem("theme") ?? "true") ? true : false;
+        value = JSON.parse(localStorage.getItem("theme") ?? "false") ? true : false;
     } catch {
         value = false;
     }
