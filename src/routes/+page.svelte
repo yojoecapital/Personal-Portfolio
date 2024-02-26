@@ -9,6 +9,7 @@
     import Link from "$lib/components/icons/Link.svelte";
     import { getThemeStore, type ThemeStore } from "$lib/stores/theme";
     import { onMount } from "svelte";
+    import Skill from "$lib/components/Skill.svelte";
     
     let theme: ThemeStore;
     onMount(() => {
@@ -63,7 +64,7 @@
     <h3 id="web-apps" class="text-xl sm:text-2xl">Web Apps 💻</h3>
     <ProjectCard 
         title="Quran Dojo" src="images/quran-dojo.jpg" devSet={[[".NET", "C#"]]}
-        demo="https://youtu.be/Vw7HfzTqF6I"
+        demo="https://youtu.be/-ffMoF1leB8"
     >
         Quran Dojo is a web application I built for my Quran memorization class using ASP.NET MVC and C#.
         Teachers can design memorization plans for their students. 
@@ -122,6 +123,26 @@
     >
         Arabize is a CLI for Windows Systems that translates Arabic-transliterated letters into Arabic Unicode characters and copies to clipboard.
     </ProjectCard>
+    <Header id="skills">Skills 🧠</Header>
+    <div class="card card-compact max-w-lg glass border-0 shadow-xl">
+        <div class="card-body">
+            <p class="text-center">
+                <Skill src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/csharp/csharp-original.svg" text="C#"/>
+                <Skill src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/c/c-original.svg" text="C"/>
+                <Skill src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg" text="Java"/>
+                <Skill src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg" text="Python"/>
+                <Skill src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg" text="TypeScript"/>
+                <Skill src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/microsoftsqlserver/microsoftsqlserver-original.svg" text="T-SQL"/>
+                <Skill src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/sqlite/sqlite-original.svg" text="SQLite"/>
+                <Skill src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/dot-net/dot-net-original.svg" text=".NET"/>
+                <Skill src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg" text="React"/>
+                <Skill src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/svelte/svelte-original.svg" text="SvelteKit"/>
+                <Skill src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/prisma/prisma-original.svg" text="Prisma"/>
+                <Skill src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/unity/unity-original.svg" text="Unity"/>
+                <Skill src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/blender/blender-original.svg" text="Blender"/>
+            </p>
+        </div>
+    </div>
     <Header id="experience">Experience 💼</Header>
     <Timeline events={[
         {
