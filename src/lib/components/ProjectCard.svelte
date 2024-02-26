@@ -37,6 +37,7 @@
             {#if repo}
                 <a href={repo} target="_blank" rel="noopener noreferrer" class="btn btn-neutral"><GitHub/> GitHub</a>
             {/if}
+            <slot name="footer"/>
         </div>
     </div>
 </div>

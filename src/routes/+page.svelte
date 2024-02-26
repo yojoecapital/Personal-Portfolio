@@ -41,7 +41,7 @@
                         <LinkedIn/> <span class="sm:block hidden">LinkedIn</span>
                     </a>
                 </li>
-                <li><a href="{base}/yousef_suleiman_resume.pdf" target="_blank" rel="noopener noreferrer"><Link/> Résumé</a></li>
+                <li><a href="{base}/yousef-suleiman-resume.pdf" target="_blank" rel="noopener noreferrer"><Link/> Résumé</a></li>
             </ul>
         </div>
         <div class="flex-1 h-full gap-3">
@@ -61,7 +61,10 @@
 <div class="flex flex-col items-center gap-5 p-2 mb-80" style="image-rendering: auto;">
     <Header id="projects">Projects 🔨</Header>
     <h3 id="web-apps" class="text-xl sm:text-2xl">Web Apps 💻</h3>
-    <ProjectCard title="Quran Dojo" src="images/quran-dojo.jpg" devSet={[[".NET", "C#"]]}>
+    <ProjectCard 
+        title="Quran Dojo" src="images/quran-dojo.jpg" devSet={[[".NET", "C#"]]}
+        demo="https://youtu.be/Vw7HfzTqF6I"
+    >
         Quran Dojo is a web application I built for my Quran memorization class using ASP.NET MVC and C#.
         Teachers can design memorization plans for their students. 
         Plans are created with the goal of increasing and/or maintaining pages per day milestones. 
@@ -80,7 +83,10 @@
         PokéScanner will identify the the Pokémon in the image and provide its Pokédex information.
     </ProjectCard>
     <h3 id="unity-development" class="text-xl sm:text-2xl">Unity Development 🎮</h3>
-    <ProjectCard title="Jen" src="images/jen.gif" devSet={[["Unity", "C#"]]}>
+    <ProjectCard 
+        title="Jen" src="images/jen.gif" devSet={[["Unity", "C#"]]}
+        demo="https://youtu.be/c89q3Sv4Ilk"
+    >
         <p>
             Jen is a turn-based strategy game I developed using Unity and C#. 
             Set on a grid-based board, players command units made up of Jenga-like blocks. 
@@ -89,6 +95,9 @@
             I plan to make Jen available to the public, but before its release, 
             I intend to train an AI model capable of playing against human opponents.
         </p>
+        <svelte:fragment slot="footer">
+            <a href="{base}/jen-user-manual.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-neutral"><Link/> User Manual</a>
+        </svelte:fragment>
     </ProjectCard>
     <ProjectCard 
         title="Cornerfalls Combat" src="images/cornerfalls-combat.gif" devSet={[["Unity", "C#"]]} 
@@ -114,7 +123,6 @@
         Arabize is a CLI for Windows Systems that translates Arabic-transliterated letters into Arabic Unicode characters and copies to clipboard.
     </ProjectCard>
     <Header id="experience">Experience 💼</Header>
-
     <Timeline events={[
         {
             when: "June 2023 - Present",
