@@ -7,7 +7,6 @@
     import GitHub from "$lib/components/icons/GitHub.svelte";
     import LinkedIn from "$lib/components/icons/LinkedIn.svelte";
     import Link from "$lib/components/icons/Link.svelte";
-    import { blur } from "svelte/transition";
     import { getThemeStore, type ThemeStore } from "$lib/stores/theme";
     import { onMount } from "svelte";
     
@@ -18,45 +17,48 @@
 </script>
 
 <div id="home" class="min-h-full flex flex-col bg-pattern bg-base-200">
-    <div class="flex-1 flex justify-center items-center">
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-3 max-w-screen-lg h-full md:h-auto m-5" in:blur={{duration: 300}}>
-            <div class="flex justify-center items-start md:items-center">
-                <div class="max-w-96">
-                    <div 
-                        class="bg-contain bg-center bg-no-repeat"
-                        style="background-image: url({base}/bg/world-{$theme ? "dark" : "light"}.png); image-rendering: pixelated;"    
-                    >
-                        <div class="size-full">
-                            <div class="avatar m-[25%] md:m-[23%]">
-                                <div class="rounded-full ring-8 ring-primary ring-offset-base-100 ring-offset-8"><img src="yousef.png" alt="Yousef Suleiman" style="image-rendering: auto;"/></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div> 
-            <div class="flex max-h-lvh md:h-auto md:items-center">
-                <div class="text-xl md:text-2xl">
-                    <strong>
-                        Hi, I'm Yousef.
-                    </strong>
-                    <p>
-                        I'm a Computer Science major at Illinois Institute of Technology and I make 
-                        <TypeWriter words={["web apps.", "video games.", "animations.", "console apps."]}/>
-                    </p>
-                    <div class="mt-3">
-                        <a href="https://github.com/yojoecapital" target="_blank" rel="noopener noreferrer" class="btn btn-neutral mb-2"><GitHub/></a>
-                        <a href="https://www.linkedin.com/in/yousef-suleiman-4ba75a242" target="_blank" rel="noopener noreferrer" class="btn btn-neutral mb-2"><LinkedIn/></a>
-                        <a href="{base}/yousef_suleiman_resume.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-neutral mb-2"><Link/> Resume</a>
-                    </div>
-                </div>
+    <div class="flex-1 flex flex-col items-center gap-10 p-2">
+        <div class="flex-none flex">
+            <div 
+                class="bg-contain bg-center bg-no-repeat flex justify-center items-center lg:size-96 sm:size-80 size-64"
+                style="background-image: url({base}/bg/world-{$theme ? "dark" : "light"}.png); image-rendering: pixelated;"    
+            >
+                <div 
+                    class="bg-contain bg-center bg-no-repeat size-[55%] rounded-full ring-8 ring-primary ring-offset-8 ring-offset-base-100"
+                    style="background-image: url({base}/yousef.png); image-rendering: auto;"    
+                />
+            </div>
+        </div> 
+        <div>
+            <ul class="menu menu-horizontal bg-base-300 rounded-box">
+                <li>
+                    <a href="https://github.com/yojoecapital" target="_blank" rel="noopener noreferrer">
+                        <GitHub/> <span class="sm:block hidden">GitHub</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.linkedin.com/in/yousef-suleiman-4ba75a242" target="_blank" rel="noopener noreferrer">
+                        <LinkedIn/> <span class="sm:block hidden">LinkedIn</span>
+                    </a>
+                </li>
+                <li><a href="{base}/yousef_suleiman_resume.pdf" target="_blank" rel="noopener noreferrer"><Link/> Résumé</a></li>
+            </ul>
+        </div>
+        <div class="flex-1 h-full gap-3">
+            <div class="md:text-2xl text-xl max-w-2xl">
+                <strong>Hi, I'm Yousef.</strong>
+                <p>
+                    I'm a Computer Science major at Illinois Institute of Technology and I make 
+                    <TypeWriter words={["web apps.", "video games.", "animations.", "console apps."]}/>
+                </p>
             </div>
         </div>
     </div>
     <div class="flex-none">
-        <img class="w-full" src="bg/animation.gif" alt="Animation" style="image-rendering: pixelated;"/>
+        <img class="sm:w-full" src="bg/animation.gif" alt="Animation" style="image-rendering: pixelated;"/>
     </div>
 </div>
-<div class="flex flex-col items-center gap-5 p-5 mb-80" style="image-rendering: auto;">
+<div class="flex flex-col items-center gap-5 p-2 mb-80" style="image-rendering: auto;">
     <Header id="projects">Projects 🔨</Header>
     <h3 id="web-apps" class="text-xl sm:text-2xl">Web Apps 💻</h3>
     <ProjectCard title="Quran Dojo" src="images/quran-dojo.jpg" devSet={[[".NET", "C#"]]}>
@@ -112,6 +114,7 @@
         Arabize is a CLI for Windows Systems that translates Arabic-transliterated letters into Arabic Unicode characters and copies to clipboard.
     </ProjectCard>
     <Header id="experience">Experience 💼</Header>
+
     <Timeline events={[
         {
             when: "June 2023 - Present",
@@ -128,7 +131,7 @@
         }
     ]}/>
     <Header id="education">Education 🤓</Header>
-    <div class="card card-compact max-w-lg bg-base-200 border-0 shadow-xl">
+    <div class="card card-compact max-w-lg glass border-0 shadow-xl">
         <div class="card-body">
             <a href="https://www.iit.edu" target="_blank" rel="noopener noreferrer">
                 <img class="w-40" src="iit.svg" alt="Illinois Tech">
@@ -152,7 +155,7 @@
         </div>
     </div>
     <Header id="contact">Contact ☎️</Header>
-    <div class="card card-compact max-w-lg bg-base-200 border-0 shadow-xl">
+    <div class="card card-compact max-w-lg glass border-0 shadow-xl">
         <div class="card-body">
             <p>
                 Please contact me directly at <a href="mailto:yousefsuleiman10@gmail.com" target="_blank" rel="noopener noreferrer" class="link">yousefsuleiman10@gmail.com</a>

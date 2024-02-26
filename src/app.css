@@ -5,18 +5,3 @@
 body {
     overflow: hidden;
 }
-
-/* for older browsers */
-@supports not (color: oklch(0 0 0)) {
-    :root {
-      --fallback-b1: #a1c5ff;
-      --fallback-b2: #7aa5eb;
-    }
-    @media (prefers-color-scheme: dark) {
-      :root {
-        
-        --fallback-b1: #1d232a;
-        --fallback-b2: #191e24;
-      }
-    }
-  }

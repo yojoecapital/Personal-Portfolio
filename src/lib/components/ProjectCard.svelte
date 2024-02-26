@@ -12,7 +12,7 @@
     export let repo: string | undefined = undefined;
 </script>
 
-<div class="card card-compact bg-base-200 max-w-lg shadow-xl ">
+<div class="card card-compact glass max-w-lg shadow-xl ">
     {#if src}
         <figure><img class="w-full" {src} alt={title}/></figure>
     {/if}
