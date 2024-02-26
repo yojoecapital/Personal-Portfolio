@@ -2,6 +2,7 @@
     // imports
     import Logo from "$lib/components/Logo.svelte";
     import { base } from '$app/paths';
+    import LightSwitch from "./LightSwitch.svelte";
 </script>
 <div class="navbar bg-base-300 {$$props.class}">
     <div class="navbar-start">
@@ -23,12 +24,9 @@
                 </li>
                 <li><a href="{base}#experience">Experience 💼</a></li>
                 <li><a href="{base}#education">Education 🤓</a></li>
+                <li><a href="{base}#contact">Contact ☎️</a></li>
                 <li>
-                    <label class="swap place-content-start">
-                        <input type="checkbox" data-toggle-theme="dark,light" data-act-class="ACTIVECLASS"/>
-                        <div class="swap-on">Dark 🌚</div>
-                        <div class="swap-off">Light 🌞</div>
-                    </label>
+                    <LightSwitch class="place-content-start"/>
                 </li>
             </ul>
         </div>
@@ -36,18 +34,15 @@
             <Logo/>
         </a>
     </div>
-    <div class="navbar-end hidden lg:flex">
+    <div class="navbar-center hidden lg:flex">
         <ul class="menu menu-horizontal px-1">
-            <li>
-                <label class="swap">
-                    <input type="checkbox" data-toggle-theme="dark,light" data-act-class="ACTIVECLASS"/>
-                    <div class="swap-on">Dark 🌚</div>
-                    <div class="swap-off">Light 🌞</div>
-                </label>
-            </li>
             <li><a href="{base}#projects">Projects 🔨</a></li> 
             <li><a href="{base}#experience">Experience 💼</a></li>
             <li><a href="{base}#education">Education 🤓</a></li>
+            <li><a href="{base}#contact">Contact ☎️</a></li>
         </ul>
+    </div>
+    <div class="navbar-end hidden lg:flex">
+        <ul class="menu menu-horizontal px-1"><li><LightSwitch/></li></ul>
     </div>
 </div>

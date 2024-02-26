@@ -1,17 +1,22 @@
 <script lang="ts">
     import "../app.css";
     import Navbar from "$lib/components/Navbar.svelte";
+    import { getThemeStore, type ThemeStore } from "$lib/stores/theme";
     import { onMount } from "svelte";
-    import { themeChange } from "theme-change"
-
+    import { base } from "$app/paths";
+    
+    let theme: ThemeStore;
     onMount(() => {
-        themeChange(false)
+        theme = getThemeStore();
     });
 </script>
 
-<div class="flex flex-col h-screen">
+<div class="flex flex-col h-screen" data-theme={$theme ? "dark" : "light"}>
     <Navbar class="flex-none"/>
-    <div class="flex-1 overflow-y-auto scroll-smooth bg-cover bg-top bg-no-repeat sky-bg">
+    <div 
+        class="flex-1 overflow-y-auto scroll-smooth bg-cover bg-top bg-no-repeat"
+        style="background-image: url({base}/bg/mountain-{$theme ? "dark" : "light"}.gif); image-rendering: pixelated;"
+    >
         <slot/>
     </div>
 </div>

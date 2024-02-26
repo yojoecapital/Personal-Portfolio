@@ -12,7 +12,7 @@
     export let repo: string | undefined = undefined;
 </script>
 
-<div class="card card-compact bg-slate-500 text-white max-w-lg shadow-xl ">
+<div class="card card-compact glass max-w-lg shadow-xl ">
     {#if src}
         <figure><img class="w-full" {src} alt={title}/></figure>
     {/if}
@@ -37,6 +37,7 @@
             {#if repo}
                 <a href={repo} target="_blank" rel="noopener noreferrer" class="btn btn-neutral"><GitHub/> GitHub</a>
             {/if}
+            <slot name="footer"/>
         </div>
     </div>
 </div>

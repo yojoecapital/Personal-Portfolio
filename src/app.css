@@ -2,31 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-    --bg-sky-light: url("https://yojoecapital.github.io/Personal-Portfolio/bg/bg-light.gif");
-    --bg-sky-dark: url("https://yojoecapital.github.io/Personal-Portfolio/bg/bg-dark.gif");
-    --bg-world-light: url("https://yojoecapital.github.io/Personal-Portfolio/bg/world-light.png");
-    --bg-world-dark: url("https://yojoecapital.github.io/Personal-Portfolio/bg/world-dark.png");
-}
-
 body {
     overflow: hidden;
-}
-
-[data-theme="dark"] {
-    --bg-sky: var(--bg-sky-dark);
-    --bg-world: var(--bg-world-dark);
-}
-
-[data-theme="light"] {
-    --bg-sky: var(--bg-sky-light);
-    --bg-world: var(--bg-world-light);
-}
-
-.sky-bg {
-    background-image: var(--bg-sky);
-}
-
-.world-bg {
-    background-image: var(--bg-world);
 }
