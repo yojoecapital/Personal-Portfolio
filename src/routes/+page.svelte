@@ -128,18 +128,28 @@
         <div class="card-body">
             <p class="text-center">
                 <Skill src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/csharp/csharp-original.svg" text="C#"/>
+                <Skill src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/dot-net/dot-net-original.svg" text=".NET"/>
+                <Skill src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/dotnetcore/dotnetcore-original.svg" text=".NET Core"/>
                 <Skill src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/c/c-original.svg" text="C"/>
                 <Skill src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg" text="Java"/>
                 <Skill src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg" text="Python"/>
+                <Skill src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tensorflow/tensorflow-original.svg" text="TensorFlow"/>
+                <Skill src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/pytorch/pytorch-original.svg" text="PyTorch"/>
+                <Skill src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/jupyter/jupyter-original.svg" text="Jupyter"/>
+                <Skill src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" text="JavaScript"/>
                 <Skill src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg" text="TypeScript"/>
-                <Skill src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/microsoftsqlserver/microsoftsqlserver-original.svg" text="T-SQL"/>
-                <Skill src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/sqlite/sqlite-original.svg" text="SQLite"/>
-                <Skill src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/dot-net/dot-net-original.svg" text=".NET"/>
+                <Skill src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg" text="HTML"/>
+                <Skill src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg" text="CSS"/>
+                <Skill src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg" text="tailwindcss"/>
                 <Skill src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg" text="React"/>
                 <Skill src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/svelte/svelte-original.svg" text="SvelteKit"/>
                 <Skill src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/prisma/prisma-original.svg" text="Prisma"/>
+                <Skill src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/microsoftsqlserver/microsoftsqlserver-original.svg" text="T-SQL"/>
+                <Skill src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/sqlite/sqlite-original.svg" text="SQLite"/>
+                <Skill src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg" text="Git"/>
                 <Skill src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/unity/unity-original.svg" text="Unity"/>
                 <Skill src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/blender/blender-original.svg" text="Blender"/>
+                <Skill src="{base}/moho.svg" text="Moho"/>
             </p>
         </div>
     </div>
