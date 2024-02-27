@@ -128,46 +128,49 @@
         <div class="card-body">
             <p class="text-center">
                 <Skill src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/csharp/csharp-original.svg" text="C#"/>
-                <Skill src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/dot-net/dot-net-original.svg" text=".NET"/>
-                <Skill src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/dotnetcore/dotnetcore-original.svg" text=".NET Core"/>
                 <Skill src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/c/c-original.svg" text="C"/>
                 <Skill src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg" text="Java"/>
                 <Skill src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg" text="Python"/>
+                <Skill src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" text="JavaScript"/>
+                <Skill src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg" text="TypeScript"/>
+                <Skill src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/microsoftsqlserver/microsoftsqlserver-original.svg" text="T-SQL"/>
+                <Skill src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/sqlite/sqlite-original.svg" text="SQLite"/>
+                <Skill src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/dot-net/dot-net-original.svg" text=".NET"/>
+                <Skill src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/dotnetcore/dotnetcore-original.svg" text=".NET Core"/>
+                <Skill src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg" text="React"/>
+                <Skill src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/svelte/svelte-original.svg" text="SvelteKit"/>
+                <Skill src="{base}/ef-core.svg" text="EF Core"/>
+                <Skill src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/prisma/prisma-original.svg" text="Prisma"/>
                 <Skill src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tensorflow/tensorflow-original.svg" text="TensorFlow"/>
                 <Skill src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/pytorch/pytorch-original.svg" text="PyTorch"/>
                 <Skill src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/jupyter/jupyter-original.svg" text="Jupyter"/>
-                <Skill src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" text="JavaScript"/>
-                <Skill src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg" text="TypeScript"/>
                 <Skill src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg" text="HTML"/>
                 <Skill src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg" text="CSS"/>
+                <Skill src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/jquery/jquery-original.svg" text="JQuery"/>
                 <Skill src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg" text="tailwindcss"/>
-                <Skill src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg" text="React"/>
-                <Skill src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/svelte/svelte-original.svg" text="SvelteKit"/>
-                <Skill src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/prisma/prisma-original.svg" text="Prisma"/>
-                <Skill src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/microsoftsqlserver/microsoftsqlserver-original.svg" text="T-SQL"/>
-                <Skill src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/sqlite/sqlite-original.svg" text="SQLite"/>
-                <Skill src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg" text="Git"/>
                 <Skill src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/linux/linux-original.svg" text="Linux"/>
+                <Skill src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg" text="Git"/>
                 <Skill src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/unity/unity-original.svg" text="Unity"/>
-                <Skill src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/blender/blender-original.svg" text="Blender" href="https://www.blender.org"/>
                 <Skill src="{base}/moho.svg" text="Moho" href="https://moho.lostmarble.com"/>
+                <Skill src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/blender/blender-original.svg" text="Blender" href="https://www.blender.org"/>
+                <Skill src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/latex/latex-original.svg" text="LaTeX"/>
             </p>
         </div>
     </div>
     <Header id="experience">Experience 💼</Header>
     <Timeline events={[
         {
-            when: "June 2023 - Present",
+            when: "Jun 2023 - Present",
             title: "DevOps Internship - DataServ",
             description: `As a DevOps intern, I mainly deal with backend development. 
             Some of the tasks I am working on include streamlining T-SQL database operations by managing triggers,
             executing unit tests, and conducting post-promotion validations to ensure the reliability of implemented solutions.`
         },
         {
-            when: "June - July 2022 & Dec - Feb 2023",
+            when: "Jun - July 2022 & Dec - Feb 2023",
             title: "Business Technology Internship - IAA",
             description: `As a Business Technology intern, I worked on web development using ASP.NET MVC, C#, and T-SQL.
-            I developed a REST API to populate internal client reports.`
+            I developed a REST API to populate internal client metric reports.`
         }
     ]}/>
     <Header id="education">Education 🤓</Header>
@@ -184,7 +187,7 @@
             <span>
                 Graduating in May 2024
                 <br/>
-                GPA: 3.84
+                GPA: 3.896
             </span>
             <div>
                 <ul class="list-disc list-inside">
