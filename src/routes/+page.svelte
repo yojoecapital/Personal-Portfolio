@@ -143,7 +143,6 @@
                 <Skill src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/prisma/prisma-original.svg" text="Prisma"/>
                 <Skill src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tensorflow/tensorflow-original.svg" text="TensorFlow"/>
                 <Skill src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/pytorch/pytorch-original.svg" text="PyTorch"/>
-                <Skill src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/jupyter/jupyter-original.svg" text="Jupyter"/>
                 <Skill src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg" text="HTML"/>
                 <Skill src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg" text="CSS"/>
                 <Skill src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/jquery/jquery-original.svg" text="JQuery"/>
@@ -151,9 +150,9 @@
                 <Skill src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/linux/linux-original.svg" text="Linux"/>
                 <Skill src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg" text="Git"/>
                 <Skill src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/unity/unity-original.svg" text="Unity"/>
-                <Skill src="{base}/moho.svg" text="Moho" href="https://moho.lostmarble.com"/>
-                <Skill src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/blender/blender-original.svg" text="Blender" href="https://www.blender.org"/>
                 <Skill src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/latex/latex-original.svg" text="LaTeX"/>
+                <Skill src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/blender/blender-original.svg" text="Blender" href="https://www.blender.org"/>
+                <Skill src="{base}/moho.svg" text="Moho" href="https://moho.lostmarble.com"/>
             </p>
         </div>
     </div>
