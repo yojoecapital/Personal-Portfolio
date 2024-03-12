@@ -159,14 +159,14 @@
     <Header id="experience">Experience 💼</Header>
     <Timeline events={[
         {
-            when: "Jun 2023 - Present",
+            when: "Jun 2023 - present",
             title: "DevOps Internship - DataServ",
             description: `As a DevOps intern, I mainly deal with backend development. 
             Some of the tasks I am working on include streamlining T-SQL database operations by managing triggers,
             executing unit tests, and conducting post-promotion validations to ensure the reliability of implemented solutions.`
         },
         {
-            when: "Jun - July 2022 & Dec - Feb 2023",
+            when: "Jun - Jul 2022 & Dec - Feb 2023",
             title: "Business Technology Internship - IAA",
             description: `As a Business Technology intern, I worked on web development using ASP.NET MVC, C#, and T-SQL.
             I developed a REST API to populate internal client metric reports.`
