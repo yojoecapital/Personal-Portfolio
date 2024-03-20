@@ -4,7 +4,7 @@
     import { base } from '$app/paths';
     import LightSwitch from "./LightSwitch.svelte";
 </script>
-<div class="navbar bg-base-300 {$$props.class}">
+<div class="navbar bg-base-300 {$$props.class ?? ""}">
     <div class="navbar-start">
         <div class="dropdown">
             <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
