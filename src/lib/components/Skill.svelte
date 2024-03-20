@@ -4,7 +4,7 @@
     export let href: string | undefined = undefined;
 </script>
 
-<div class="inline-block {$$props.class} mb-2 w-fit">
+<div class="inline-block {$$props.class ?? ""} mb-2 w-fit">
     <div class="flex flex-col justify-center items-center gap-2">
         <img class="size-10" {src} alt={text} />
         {#if href}

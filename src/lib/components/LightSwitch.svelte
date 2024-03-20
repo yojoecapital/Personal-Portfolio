@@ -8,7 +8,7 @@
     });
 </script>
 
-<label class="swap place-content-start {$$props.class}">
+<label class="swap place-content-start {$$props.class ?? ""}">
     <input type="checkbox" class="theme-controller" value="dark" checked={$theme} on:click={theme.toggle}/>
     <div class="swap-on">Dark 🌚</div>
     <div class="swap-off">Light 🌞</div>

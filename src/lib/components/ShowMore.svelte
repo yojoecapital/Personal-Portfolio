@@ -8,7 +8,7 @@
     }
 </script>
 
-<div class={$$props.class}>
+<div class={$$props.class ?? ""}>
     <div class="{showMore ? "" : `${maxClass} truncate`}">
         <slot/>
     </div>
