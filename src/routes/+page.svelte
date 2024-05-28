@@ -184,13 +184,14 @@
                 B.S. in Computer Science
             </span>
             <span>
-                Graduating in May 2024
+                May 2024
                 <br/>
-                GPA: 3.896
+                GPA: 3.90
             </span>
             <div>
                 <ul class="list-disc list-inside">
-                    <li>Dean's List 2021, 2022, 2023</li>
+                    <li>Summa Cum Laude Graduate</li>
+                    <li>Dean's List 2021, 2022, 2023, 2024</li>
                     <li>Early Acceptance to Illinois Tech's Accelerated Master's Program</li>
                 </ul>
             </div>
