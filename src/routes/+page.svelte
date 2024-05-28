@@ -49,7 +49,7 @@
             <div class="md:text-2xl text-xl max-w-2xl">
                 <strong>Hi, I'm Yousef.</strong>
                 <p>
-                    I'm a Computer Science major at Illinois Institute of Technology and I make 
+                    I'm a Computer Science graduate from Illinois Institute of Technology and I make 
                     <TypeWriter words={["web apps.", "video games.", "animations.", "console apps."]}/>
                 </p>
             </div>
