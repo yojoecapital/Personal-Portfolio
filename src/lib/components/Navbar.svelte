@@ -1,5 +1,4 @@
 <script lang="ts">
-    // imports
     import Logo from "$lib/components/Logo.svelte";
     import { base } from '$app/paths';
     import LightSwitch from "./LightSwitch.svelte";

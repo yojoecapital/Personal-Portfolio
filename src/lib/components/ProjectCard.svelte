@@ -1,10 +1,8 @@
 <script lang="ts">
-    // imports
     import ShowMore from "./ShowMore.svelte";
     import GitHub from "./icons/GitHub.svelte";
     import Youtube from "./icons/Youtube.svelte";
 
-    // props
     export let title: string;
     export let src: string | undefined = undefined;
     export let devSet: string[][] = [];

@@ -1,6 +1,7 @@
 <script lang="ts">
     import "../app.css";
     import Navbar from "$lib/components/Navbar.svelte";
+    import Background from "$lib/components/images/Background.svelte";
     import { getThemeStore, type ThemeStore } from "$lib/stores/theme";
     import { onMount } from "svelte";
     import { base } from "$app/paths";
@@ -13,10 +14,7 @@
 
 <div class="flex flex-col h-screen" data-theme={$theme ? "dark" : "light"}>
     <Navbar class="flex-none"/>
-    <div 
-        class="flex-1 overflow-y-auto scroll-smooth bg-cover bg-top bg-no-repeat"
-        style="background-image: url({base}/bg/mountain-{$theme ? "dark" : "light"}.gif); image-rendering: pixelated;"
-    >
+    <Background theme={$theme}>
         <slot/>
-    </div>
+    </Background>
 </div>

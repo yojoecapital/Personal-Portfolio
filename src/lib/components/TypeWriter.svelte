@@ -1,8 +1,6 @@
 <script lang="ts">
-    // imports
     import { onDestroy } from "svelte";
 
-    // props
     export const cursorOn = " \u2503";
     export const cursorOff = " \u00A0";
     export const timeout = 100;

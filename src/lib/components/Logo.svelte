@@ -1,5 +1,4 @@
 <script lang="ts">
-    // props
     export let width = "100%";
     export let height = "100%";
 </script>

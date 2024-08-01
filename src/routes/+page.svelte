@@ -10,6 +10,9 @@
     import { getThemeStore, type ThemeStore } from "$lib/stores/theme";
     import { onMount } from "svelte";
     import Skill from "$lib/components/Skill.svelte";
+    import World from "$lib/components/images/World.svelte";
+    import Yousef from "$lib/components/images/Yousef.svelte";
+    import Animation from "$lib/components/images/Animation.svelte";
     
     let theme: ThemeStore;
     onMount(() => {
@@ -20,15 +23,9 @@
 <div id="home" class="min-h-full flex flex-col bg-pattern bg-base-200">
     <div class="flex-1 flex flex-col items-center gap-10 p-2">
         <div class="flex-none flex">
-            <div 
-                class="bg-contain bg-center bg-no-repeat flex justify-center items-center lg:size-96 sm:size-80 size-64"
-                style="background-image: url({base}/bg/world-{$theme ? "dark" : "light"}.png); image-rendering: pixelated;"    
-            >
-                <div 
-                    class="bg-contain bg-center bg-no-repeat size-[55%] rounded-full ring-8 ring-primary ring-offset-8 ring-offset-base-100"
-                    style="background-image: url({base}/yousef.png); image-rendering: auto;"    
-                />
-            </div>
+            <World theme={$theme}>
+                <Yousef/>
+            </World>
         </div> 
         <div>
             <ul class="menu menu-horizontal bg-base-300 rounded-box">
@@ -56,7 +53,7 @@
         </div>
     </div>
     <div class="flex-none">
-        <img class="sm:w-full" src="bg/animation.gif" alt="Animation" style="image-rendering: pixelated;"/>
+        <Animation/>
     </div>
 </div>
 <div class="flex flex-col items-center gap-5 p-2 mb-80" style="image-rendering: auto;">
@@ -117,12 +114,6 @@
         Macro Polo is a program made for Windows Systems that used Win32 keyboard hooks to allow users to create and 
         manage keyboard macros and perform text substitutions.
     </ProjectCard>
-    <ProjectCard 
-        title="Arabize" src="images/arabize.jpg" devSet={[[".NET Core", "Windows API", "C#"]]}
-        repo="https://github.com/yojoecapital/Arabize"
-    >
-        Arabize is a CLI for Windows Systems that translates Arabic-transliterated letters into Arabic Unicode characters and copies to clipboard.
-    </ProjectCard>
     <Header id="skills">Skills 🧠</Header>
     <div class="card card-compact max-w-lg glass border-0 shadow-xl">
         <div class="card-body">
@@ -146,8 +137,9 @@
                 <Skill src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg" text="HTML"/>
                 <Skill src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg" text="CSS"/>
                 <Skill src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/jquery/jquery-original.svg" text="JQuery"/>
-                <Skill src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg" text="tailwindcss"/>
+                <Skill src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg" text="Tailwind CSS"/>
                 <Skill src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/linux/linux-original.svg" text="Linux"/>
+                <Skill src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/bash/bash-original.svg" text="Bash"/>
                 <Skill src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg" text="Git"/>
                 <Skill src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/unity/unity-original.svg" text="Unity"/>
                 <Skill src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/latex/latex-original.svg" text="LaTeX"/>
@@ -161,15 +153,12 @@
         {
             when: "Jun 2023 - present",
             title: "DevOps Internship - DataServ",
-            description: `As a DevOps intern, I mainly deal with backend development. 
-            Some of the tasks I am working on include streamlining T-SQL database operations by managing triggers,
-            executing unit tests, and conducting post-promotion validations to ensure the reliability of implemented solutions.`
+            description: `As a DevOps intern at DataServ, I implemented new import solutions for 22 clients, improving efficiency by updating shell scripts to transfer files to AWS S3 and adjusting job scheduler parameters to use a new API endpoint. I also wrote Python scripts to generate dummy data, which simplified testing and verification for these solutions. Additionally, I consolidated SQL triggers and added indexes to key tables, resulting in up to a 50% reduction in wait times, according to the Database Performance Analyzer (DPA). I also migrated client jobs to the JAMS scheduler, enhancing job scheduling reliability and performance.`
         },
         {
             when: "Jun - Jul 2022 & Dec - Feb 2023",
             title: "Business Technology Internship - IAA",
-            description: `As a Business Technology intern, I worked on web development using ASP.NET MVC, C#, and T-SQL.
-            I developed a REST API to populate internal client metric reports.`
+            description: `As a Business Technology Intern at IAA, I implemented a REST API in ASP.NET MVC to efficiently populate internal client metric reports. I also conducted QA testing for the business rule engine on vehicle title and registration forms, ensuring everything met company standards. Additionally, I led a team of 3 interns to create a marketing animation, which significantly boosted our team’s collaboration.`
         }
     ]}/>
     <Header id="education">Education 🤓</Header>

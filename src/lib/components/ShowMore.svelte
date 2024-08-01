@@ -1,5 +1,4 @@
 <script lang="ts">
-    // props
     export let maxClass = "max-h-16 md:max-h-32";
 
     let showMore = false;
