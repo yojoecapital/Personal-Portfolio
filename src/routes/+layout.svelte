@@ -1,10 +1,9 @@
 <script lang="ts">
     import "../app.css";
     import Navbar from "$lib/components/Navbar.svelte";
-    import Background from "$lib/components/images/Background.svelte";
+    import Background from "$lib/components/backgrounds/Background.svelte";
     import { getThemeStore, type ThemeStore } from "$lib/stores/theme";
     import { onMount } from "svelte";
-    import { base } from "$app/paths";
     
     let theme: ThemeStore;
     onMount(() => {

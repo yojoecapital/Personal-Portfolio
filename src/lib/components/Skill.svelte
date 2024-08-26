@@ -8,9 +8,9 @@
     <div class="flex flex-col justify-center items-center gap-2">
         <img class="size-10" {src} alt={text} />
         {#if href}
-            <a {href} target="_blank" rel="noopener noreferrer" class="w-fit badge badge-outline link">{text}</a>
+            <a {href} target="_blank" rel="noopener noreferrer" class="w-fit badge badge-secondary link">{text}</a>
         {:else}
-            <div class="badge badge-outline">{text}</div>
+            <div class="badge">{text}</div>
         {/if}
     </div>
 </div>

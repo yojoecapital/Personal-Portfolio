@@ -1,5 +1,4 @@
 <script lang="ts">
-    import ShowMore from "./ShowMore.svelte";
     import GitHub from "./icons/GitHub.svelte";
     import Youtube from "./icons/Youtube.svelte";
 
@@ -25,9 +24,9 @@
                 {/each}
             </div>
         {/each}
-        <ShowMore class="grid gap-2">
+        <div class="mb-3">
             <slot/>
-        </ShowMore>
+        </div>
         <div class="card-actions">
             {#if demo}
                 <a href={demo} target="_blank" rel="noopener noreferrer" class="btn btn-secondary"><Youtube/> Demo</a>

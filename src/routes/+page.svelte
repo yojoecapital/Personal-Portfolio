@@ -10,9 +10,16 @@
     import { getThemeStore, type ThemeStore } from "$lib/stores/theme";
     import { onMount } from "svelte";
     import Skill from "$lib/components/Skill.svelte";
-    import World from "$lib/components/images/World.svelte";
-    import Yousef from "$lib/components/images/Yousef.svelte";
-    import Animation from "$lib/components/images/Animation.svelte";
+    import World from "$lib/components/backgrounds/World.svelte";
+    import animation from "$lib/assets/gif/animation.gif";
+    import yousef from "$lib/assets/webp/yousef.webp";
+    import sahibAlQuran from "$lib/assets/webp/sahib-al-quran.webp"
+    import pokescanner from "$lib/assets/webp/pokescanner.webp"
+    import jen from "$lib/assets/webp/jen.webp"
+    import cornerfallsCombat from "$lib/assets/webp/cornerfalls-combat.webp"
+    import efCore from "$lib/assets/svg/ef-core.svg";
+    import moho from "$lib/assets/svg/moho.svg";
+    import iit from "$lib/assets/svg/iit.svg";
     
     let theme: ThemeStore;
     onMount(() => {
@@ -24,7 +31,10 @@
     <div class="flex-1 flex flex-col items-center gap-10 p-2">
         <div class="flex-none flex">
             <World theme={$theme}>
-                <Yousef/>
+                <div 
+                    class="bg-contain bg-center bg-no-repeat size-[55%] rounded-full ring-8 ring-primary ring-offset-8 ring-offset-base-100"
+                    style="background-image: url({yousef}); image-rendering: auto;"    
+                />            
             </World>
         </div> 
         <div>
@@ -53,23 +63,25 @@
         </div>
     </div>
     <div class="flex-none">
-        <Animation/>
+        <img class="sm:w-full" src={animation} alt="Animation" style="image-rendering: pixelated;"/>
     </div>
 </div>
 <div class="flex flex-col items-center gap-5 p-2 mb-80" style="image-rendering: auto;">
     <Header id="projects">Projects 🔨</Header>
     <h3 id="web-apps" class="text-xl sm:text-2xl">Web Apps 💻</h3>
     <ProjectCard 
-        title="Quran Dojo" src="images/quran-dojo.jpg" devSet={[[".NET", "C#"]]}
-        demo="https://youtu.be/-ffMoF1leB8"
+        title="Sahib Al-Quran Website" src={sahibAlQuran} devSet={[["TypeScript", "SvelteKit", "MongoDB"], ["Prisma", "Google Cloud"]]}
+        demo="https://www.youtube.com/watch?v=nqFYqX55xdk&list=PL2PMs4BR7zXwDWsyc_0Tv1W9nOrd2VDqd&index=1"
     >
-        Quran Dojo is a web application I built for my Quran memorization class using ASP.NET MVC and C#.
-        Teachers can design memorization plans for their students. 
-        Plans are created with the goal of increasing and/or maintaining pages per day milestones. 
-        The application will automatically generate daily tasks that the teacher can assign to their students and later follow up on.
+        The Sahib Al-Quran website is a project I've dedicated two years to developing, aimed at supporting teachers and students in their Quranic studies. 
+        Initially created with .NET and recently rebuilt using SvelteKit, the app enhances the learning experience by tracking progress categories of Memorization, Attach, and Review. 
+        It also automates goal-setting and task assignments, helping students stay organized and achieve their Quranic learning goals efficiently.
+        <svelte:fragment slot="footer">
+            <a href="https://quran-dojo.web.app" target="_blank" rel="noopener noreferrer" class="btn btn-neutral"><Link/> Website</a>
+        </svelte:fragment>
     </ProjectCard>
     <ProjectCard 
-        title="PokeScanner" src="images/pokescanner.gif" devSet={[["Django", "TensorFlow", "Python"], ["React", "JavaScript"]]} 
+        title="PokeScanner" src={pokescanner} devSet={[["Django", "TensorFlow", "Python"], ["React", "JavaScript"]]} 
         repo="https://github.com/yojoecapital/pokescanner"
     >
         PokéScanner is a web application that my 
@@ -82,7 +94,7 @@
     </ProjectCard>
     <h3 id="unity-development" class="text-xl sm:text-2xl">Unity Development 🎮</h3>
     <ProjectCard 
-        title="Jen" src="images/jen.gif" devSet={[["Unity", "C#"]]}
+        title="Jen" src={jen} devSet={[["Unity", "C#"]]}
         demo="https://youtu.be/c89q3Sv4Ilk"
     >
         <p>
@@ -98,7 +110,7 @@
         </svelte:fragment>
     </ProjectCard>
     <ProjectCard 
-        title="Cornerfalls Combat" src="images/cornerfalls-combat.gif" devSet={[["Unity", "C#"]]} 
+        title="Cornerfalls Combat" src={cornerfallsCombat} devSet={[["Unity", "C#"]]} 
         demo="https://youtu.be/zr5MMaFu_Po"
         repo="https://github.com/yojoecapital/Cornerfalls-Combat"
     >
@@ -106,13 +118,6 @@
         The player engages in sword fighting, focusing on parrying and attacking at precise angles. 
         The player must also watch out for the line of fire from the enemies standing in the background. 
         This combat system is a proof of concept that I may expand upon in future projects.
-    </ProjectCard>
-    <h3 id="console-apps" class="text-xl sm:text-2xl">Console Apps 📟</h3>
-    <ProjectCard title="Macro Polo" src="images/macro-polo.gif" devSet={[[".NET Core", "Windows API", "C#"]]}
-        repo="https://github.com/yojoecapital/MacroPolo"
-    >
-        Macro Polo is a program made for Windows Systems that used Win32 keyboard hooks to allow users to create and 
-        manage keyboard macros and perform text substitutions.
     </ProjectCard>
     <Header id="skills">Skills 🧠</Header>
     <div class="card card-compact max-w-lg glass border-0 shadow-xl">
@@ -129,7 +134,7 @@
             <Skill src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/dotnetcore/dotnetcore-original.svg" text=".NET Core"/>
             <Skill src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg" text="React"/>
             <Skill src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/svelte/svelte-original.svg" text="SvelteKit"/>
-            <Skill src="{base}/ef-core.svg" text="EF Core"/>
+            <Skill src={efCore} text="EF Core"/>
             <Skill src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/prisma/prisma-original.svg" text="Prisma"/>
             <Skill src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tensorflow/tensorflow-original.svg" text="TensorFlow"/>
             <Skill src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/pytorch/pytorch-original.svg" text="PyTorch"/>
@@ -143,7 +148,7 @@
             <Skill src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/unity/unity-original.svg" text="Unity"/>
             <Skill src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/latex/latex-original.svg" text="LaTeX"/>
             <Skill src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/blender/blender-original.svg" text="Blender" href="https://www.blender.org"/>
-            <Skill src="{base}/moho.svg" text="Moho" href="https://moho.lostmarble.com"/>
+            <Skill src={moho} text="Moho" href="https://moho.lostmarble.com"/>
         </div>
     </div>
     <Header id="experience">Experience 💼</Header>
@@ -163,25 +168,30 @@
     <div class="card card-compact max-w-lg glass border-0 shadow-xl">
         <div class="card-body">
             <a href="https://www.iit.edu" target="_blank" rel="noopener noreferrer">
-                <img class="w-40" src="iit.svg" alt="Illinois Tech">
+                <img class="w-40" src={iit} alt="Illinois Tech">
             </a>
-            <span class="text-xl font-semibold">
+            <h3 class="text-xl font-semibold">
                 M.A.S. in Artificial Intelligence
-                <br/>
+            </h3>
+            <p>
+                <span class="badge badge-outline">August 2022 - May 2024</span>
+                <span class="badge badge-outline">GPA: 3.90</span>
+            </p>
+            <h3 class="text-xl font-semibold">
                 B.S. in Computer Science
-            </span>
-            <span>
-                May 2024
-                <br/>
-                GPA: 3.90
-            </span>
-            <div>
-                <ul class="list-disc list-inside">
-                    <li>Summa Cum Laude Graduate</li>
-                    <li>Dean's List 2021, 2022, 2023, 2024</li>
-                    <li>Early Acceptance to Illinois Tech's Accelerated Master's Program</li>
-                </ul>
-            </div>
+            </h3>
+            <p>
+                <span class="badge badge-outline">August 2020 - May 2024</span>
+                <span class="badge badge-outline">GPA: 3.85</span>
+            </p>
+            <h3 class="text-xl font-semibold">
+                Achievements
+            </h3>
+            <ul class="list-disc list-inside">
+                <li>Summa Cum Laude Graduate</li>
+                <li>Dean's List 2021, 2022, 2023, 2024</li>
+                <li>Early Acceptance to Illinois Tech's Accelerated Master's Program</li>
+            </ul>
         </div>
     </div>
     <Header id="contact">Contact ☎️</Header>
