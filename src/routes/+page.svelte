@@ -57,7 +57,7 @@
                 <strong>Hi, I'm Yousef.</strong>
                 <p>
                     I'm a Computer Science graduate from Illinois Institute of Technology and I make 
-                    <TypeWriter words={["web apps.", "video games.", "animations.", "console apps."]}/>
+                    <TypeWriter words={["web apps.", "video games.", "animations.", "cool things."]}/>
                 </p>
             </div>
         </div>

@@ -18,7 +18,6 @@
                     <ul>
                         <li><a href="{base}#web-apps">Web Apps</a></li>
                         <li><a href="{base}#unity-development">Unity Development</a></li>
-                        <li><a href="{base}#console-apps">Console Apps</a></li>
                     </ul>
                 </li>
                 <li><a href="{base}#skills">Skills 🧠</a></li>
