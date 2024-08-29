@@ -4,7 +4,7 @@ Welcome to the GitHub repository for my personal portfolio website. This site se
 
 ## Live Site
 
-Visit my portfolio [here](https://yojoecapital.github.io/portfolio).
+Visit my portfolio [here](https://yojoecapital.github.io).
 
 ## Technologies Used
 
