@@ -7,8 +7,9 @@ const config = {
     preprocess: vitePreprocess(),
     kit: {
         adapter: adapter(),
+        // change this in case you move your github pages path
 		paths: {
-            base: process.env.NODE_ENV == "production" ? "/portfolio" : "",
+            base: process.env.NODE_ENV == "production" ? "" : "",
         }
     }
 };

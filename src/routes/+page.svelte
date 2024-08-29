@@ -66,7 +66,7 @@
         <img class="sm:w-full" src={animation} alt="Animation" style="image-rendering: pixelated;"/>
     </div>
 </div>
-<div class="flex flex-col items-center gap-5 p-2 pb-80" style="image-rendering: auto;">
+<div class="flex flex-col items-center gap-5 p-2 pb-80 bg-transparent" style="image-rendering: auto;">
     <Header id="projects">Projects 🔨</Header>
     <h3 id="web-apps" class="text-xl sm:text-2xl">Web Apps 💻</h3>
     <ProjectCard 

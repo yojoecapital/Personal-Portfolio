@@ -5,9 +5,10 @@
     export let theme: boolean;
 </script>
 
-<div 
-    class="bg-cover bg-top bg-no-repeat bg-fixed" data-theme={theme ? "dark" : "light"}
-    style="background-image: url({theme ? darkSrc : lightSrc}); image-rendering: pixelated;"
->
+<div data-theme={theme ? "dark" : "light"} class="bg-transparent">
+    <div 
+        class="bg-cover bg-top bg-no-repeat bg-fixed fixed w-screen h-screen -z-50 bg-base-100"
+        style="background-image: url({theme ? darkSrc : lightSrc}); image-rendering: pixelated;"
+    />
     <slot/>
 </div>
