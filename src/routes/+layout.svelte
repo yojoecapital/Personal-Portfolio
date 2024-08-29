@@ -11,9 +11,7 @@
     });
 </script>
 
-<div class="flex flex-col h-screen" data-theme={$theme ? "dark" : "light"}>
-    <Navbar class="flex-none"/>
-    <Background theme={$theme}>
-        <slot/>
-    </Background>
-</div>
+<Background theme={$theme}>
+    <Navbar class="sticky top-0 z-10"/>
+    <slot/>
+</Background>

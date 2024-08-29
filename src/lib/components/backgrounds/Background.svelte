@@ -6,7 +6,7 @@
 </script>
 
 <div 
-    class="flex-1 overflow-y-auto scroll-smooth bg-cover bg-top bg-no-repeat"
+    class="bg-cover bg-top bg-no-repeat bg-fixed" data-theme={theme ? "dark" : "light"}
     style="background-image: url({theme ? darkSrc : lightSrc}); image-rendering: pixelated;"
 >
     <slot/>

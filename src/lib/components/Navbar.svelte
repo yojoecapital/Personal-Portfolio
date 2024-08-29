@@ -2,6 +2,10 @@
     import Logo from "$lib/components/Logo.svelte";
     import { base } from '$app/paths';
     import LightSwitch from "./LightSwitch.svelte";
+
+    const scrollToTop = () => window.scrollTo({
+        top: 0, behavior: "smooth" 
+    });
 </script>
 <div class="navbar bg-base-300 {$$props.class ?? ""}">
     <div class="navbar-start">
@@ -29,9 +33,9 @@
                 </li>
             </ul>
         </div>
-        <a class="btn btn-ghost p-2" href="{base}#home">
+        <button class="btn btn-ghost p-2" on:click={scrollToTop}>
             <Logo/>
-        </a>
+        </button>
     </div>
     <div class="navbar-center hidden lg:flex">
         <ul class="menu menu-horizontal px-1">

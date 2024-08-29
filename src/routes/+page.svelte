@@ -27,7 +27,7 @@
     });
 </script>
 
-<div id="home" class="min-h-full flex flex-col bg-pattern bg-base-200">
+<div class="min-h-[calc(100vh-4rem)] flex flex-col bg-pattern bg-base-200">
     <div class="flex-1 flex flex-col items-center gap-10 p-2">
         <div class="flex-none flex">
             <World theme={$theme}>
@@ -66,7 +66,7 @@
         <img class="sm:w-full" src={animation} alt="Animation" style="image-rendering: pixelated;"/>
     </div>
 </div>
-<div class="flex flex-col items-center gap-5 p-2 mb-80" style="image-rendering: auto;">
+<div class="flex flex-col items-center gap-5 p-2 pb-80" style="image-rendering: auto;">
     <Header id="projects">Projects 🔨</Header>
     <h3 id="web-apps" class="text-xl sm:text-2xl">Web Apps 💻</h3>
     <ProjectCard 
@@ -77,7 +77,7 @@
         Initially created with .NET and recently rebuilt using SvelteKit, the app enhances the learning experience by tracking progress categories of Memorization, Attach, and Review. 
         It also automates goal-setting and task assignments, helping students stay organized and achieve their Quranic learning goals efficiently.
         <svelte:fragment slot="footer">
-            <a href="https://quran-dojo.web.app" target="_blank" rel="noopener noreferrer" class="btn btn-neutral"><Link/> Website</a>
+            <a href="https://sahib-al-quran.com" target="_blank" rel="noopener noreferrer" class="btn btn-neutral"><Link/> Website</a>
         </svelte:fragment>
     </ProjectCard>
     <ProjectCard 
