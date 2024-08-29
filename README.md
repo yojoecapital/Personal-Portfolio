@@ -15,7 +15,7 @@ Visit my portfolio [here](https://yojoecapital.github.io).
 ## Run Locally
 
 ```bash
-git clone https://github.com/yojoecapital/portfolio.git
+git clone https://github.com/yojoecapital/yojoecapital.github.io.git
 npm install
 npm run dev
 ```
