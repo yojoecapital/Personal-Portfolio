@@ -6,6 +6,7 @@
     import { base } from '$app/paths';
     import GitHub from "$lib/components/icons/GitHub.svelte";
     import LinkedIn from "$lib/components/icons/LinkedIn.svelte";
+    import Download from "$lib/components/icons/Download.svelte";
     import Link from "$lib/components/icons/Link.svelte";
     import { getThemeStore, type ThemeStore } from "$lib/stores/theme";
     import { onMount } from "svelte";
@@ -82,7 +83,7 @@
     </ProjectCard>
     <ProjectCard 
         title="PokeScanner" src={pokescanner} devSet={[["Django", "TensorFlow", "Python"], ["React", "JavaScript"]]} 
-        repo="https://github.com/yojoecapital/pokescanner"
+        repo="https://github.com/yojoecapital/poke-scanner"
     >
         PokéScanner is a web application that my 
         <a href="https://github.com/yojoecapital/PokeScanner?tab=readme-ov-file#team-members" target="_blank" rel="noopener noreferrer" class="link">team</a> 
@@ -106,7 +107,7 @@
             I intend to train an AI model capable of playing against human opponents.
         </p>
         <svelte:fragment slot="footer">
-            <a href="{base}/jen-user-manual.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-neutral"><Link/> User Manual</a>
+            <a href="https://github.com/yojoecapital/jen-public-release" target="_blank" rel="noopener noreferrer" class="btn btn-neutral"><Download/> Download the game!</a>
         </svelte:fragment>
     </ProjectCard>
     <ProjectCard 
